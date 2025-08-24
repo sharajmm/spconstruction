@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html", "has": [{ "type": "host" }], "continue": true },
+    { "src": "/((?!.*\\..*).*)", "dest": "/index.html" }
+  ]
 }
